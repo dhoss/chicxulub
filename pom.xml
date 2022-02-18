@@ -76,20 +76,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <!-- TODO: fix maven shade warning:
-                            [WARNING] chicxulub-1.0-SNAPSHOT.jar, scala-library-2.13.6.jar, scala-reflect-2.13.4.jar, scalactic_2.13-3.2.9.jar define 1 overlapping resource:
-                            [WARNING]   - META-INF/MANIFEST.MF
-                            [WARNING] scala-library-2.13.6.jar, scala-reflect-2.13.4.jar define 2 overlapping resources:
-                            [WARNING]   - LICENSE
-                            [WARNING]   - NOTICE
-                            [WARNING] maven-shade-plugin has detected that some class files are
-                            [WARNING] present in two or more JARs. When this happens, only one
-                            [WARNING] single version of the class is copied to the uber jar.
-                            [WARNING] Usually this is not harmful and you can skip these warnings,
-                            [WARNING] otherwise try to manually exclude artifacts based on
-                            [WARNING] mvn dependency:tree -Ddetail=true and the above output.
-                            [WARNING] See http://maven.apache.org/plugins/maven-shade-plugin/
-                -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>${maven-shade.version}</version>

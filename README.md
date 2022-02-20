@@ -1,5 +1,10 @@
 # chicxulub
 
+## Setup
+* create `chicxulub` database 
+  * `psql -Upostgres -c 'create database chicxulub'`
+* run `flyway` migrations
+  * `mvn flyway:migrate`
 ## TODO:
 * Fix maven shade warning:  
 [WARNING] chicxulub-1.0-SNAPSHOT.jar, scala-library-2.13.6.jar, scala-reflect-2.13.4.jar, scalactic_2.13-3.2.9.jar define 1 overlapping resource:  
@@ -7,6 +12,7 @@
 [WARNING] scala-library-2.13.6.jar, scala-reflect-2.13.4.jar define 2 overlapping resources:  
 [WARNING]   - LICENSE  
 [WARNING]   - NOTICE  
+* create deployment script
 <!-- TODO:
 Fix maven shade warning:  
 [WARNING] chicxulub-1.0-SNAPSHOT.jar, scala-library-2.13.6.jar, scala-reflect-2.13.4.jar, scalactic_2.13-3.2.9.jar define 1 overlapping resource:  

@@ -9,6 +9,17 @@ object Main extends cask.MainRoutes {
   // TODO: organize routes into case classes
   @cask.get("/")
   def root() = {
+    // TODO: move database code to its own class
+    import scalikejdbc._
+    // TODO: make database connection information configurable
+    //    look into scalikejdbc-config
+    Class.forName("org.postgresql.Driver")
+    ConnectionPool.singleton("jdbc:postgresql://localhost:5432/chicxulub", "chicxulub", "chicxulub")
+    // TODO: create case class representing a post
+
+    // TODO: consider hikari for connection pooling
+    // TODO: use DB object for sessions
+    implicit val session = AutoSession
     // TODO: scalatags html should be contained in "views"
     html(
       body(
